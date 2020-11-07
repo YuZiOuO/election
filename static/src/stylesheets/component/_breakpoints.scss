@@ -1,0 +1,30 @@
+// controls
+@media (max-width: 719px) { 
+  .zoom-row {
+    display: none;
+  }
+  .select__years--label {
+    position: relative;
+    display: block;
+    width: 100%;
+  }
+  .select__years {
+    width: 100%;
+  }
+  .isLegacy {
+    display: none; 
+  }
+  [id="controls"].FTS-page {
+    display: none;
+  }
+}
+
+//desktop/mobile
+@media (min-width: 720px){
+  html .mobile {
+      display: none;
+  }
+  #map {
+    display: block;
+  }
+}

@@ -1,0 +1,417 @@
+/*
+    Desktop view styles
+*/
+
+  path, polygon {
+    stroke: #222222;
+    stroke-width: 1;
+    transition: fill .5s ease;
+  }
+
+  [id="map"] > svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    // background: #f7f8fa;
+  }
+
+  [id="counties-shapes"] {
+    fill: #f7f8fa;
+  }
+  [id="counties-shapes"] [data-status="null"], [id="counties-shapes"] [data-status="initial"] {
+    fill: #ffffff;
+  }
+
+
+  /* svg styles */
+  [id="state-shapes"] {
+    fill: #fff;
+    stroke-width: 1;
+  }
+  [id="state-shapes"] > polygon, [id="state-shapes"] > path {
+    stroke-width: .5;
+  }
+  .zoom [id="state-shapes"] > polygon, .zoom [id="state-shapes"] > path {
+    stroke-width: 1;
+  }
+
+  [id="state-shapes"] > polygon:hover, [id="state-shapes"] > path:hover, [id="state-shapes"] > path[data-hover="true"] {
+    stroke-width: 2;
+  }
+
+  [id="state-shapes"] > polygon[data-status="pre"]:hover, [id="state-shapes"] > path[data-status="pre"]:hover, [id="state-shapes"] > path[data-hover="true"][data-status="pre"] {
+    stroke-width: .5;
+  }
+  
+  .zoom [id="state-shapes"] > polygon:hover, .zoom [id="state-shapes"] > path:hover, .zoom [id="state-shapes"] > path[data-hover="true"] {
+    stroke-width: 1.5;
+  }
+
+  [id="counties-shapes"] path:hover {
+    stroke-width: 1;
+  }
+
+  #special-districts .cls-1 {
+    stroke: none;
+  }
+  .empty [id="state-shapes"] path, .empty [id="state-shapes"] polygon {
+    stroke-width: 1.5;
+  }
+  .empty [id="state-shapes"] path:not(#ak), .empty [id="state-shapes"] polygon:not(#ak) {
+    fill: none;
+  }
+  .empty [id="ak-counties"] {
+    display: none;
+  }
+  .empty [id="electoral-votes"] {
+    display: none;
+  }
+  .zoom .empty [id="state-shapes"] path:not(#ak), .zoom .empty [id="state-shapes"] polygon:not(#ak) {
+    stroke-width: 1;
+  }
+  [id="counties-shapes"] path, [id="counties-shapes"] polygon {
+    stroke-width: .5;
+  }
+  .zoom .empty [id="counties-shapes"] path, .zoom .empty [id="counties-shapes"] polygon {
+    stroke-width: .25;
+  }
+
+  [id="state-names"] {
+    display: none;
+  }
+
+  [id$="-3"], [id$="-2"] {
+    stroke-width: 0;
+  }
+
+  /* party styles */
+
+  [data-party] {
+    fill: $white;
+  }
+  path[data-party="R"], circle[data-party="R"] {
+    fill: $rep;
+  }
+  path[data-party="LR"], circle[data-party="LR"] {
+    fill: $rep-lean;
+  }
+  path[data-party="R"][data-status="uncalled"],
+  circle[data-party="R"][data-status="uncalled"] {
+    fill: $rep-lean;
+  }
+
+  path[data-party="D"], circle[data-party="D"] {
+    fill: $dem;
+  }
+  path[data-party="LD"], circle[data-party="LD"] {
+    fill: $dem-lean;
+  }
+  path[data-party="D"][data-status="uncalled"],
+  circle[data-party="D"][data-status="uncalled"] {
+    fill: $dem-lean;
+  }
+
+  path[data-party="I"], circle[data-party="I"] {
+    fill: $ind;
+  }
+  path[data-party="LI"], circle[data-party="LI"] {
+    fill: $ind-lean;
+  }
+  path[data-party="I"][data-status="uncalled"],
+  circle[data-party="I"][data-status="uncalled"] {
+    fill: $ind-lean;
+  }
+
+  path[data-party="G"], circle[data-party="G"] {
+    fill: $green;
+  }
+  path[data-party="LG"], circle[data-party="LG"] {
+    fill: $green-lean;
+  }
+  path[data-party="G"][data-status="uncalled"],
+  circle[data-party="G"][data-status="uncalled"] {
+    fill: $green-lean;
+  }
+
+  path[data-party="O"], circle[data-party="O"] {
+    fill: $other;
+  }
+  path[data-party="LO"], circle[data-party="LO"] {
+    fill: $other-lean;
+  }
+  path[data-party="O"][data-status="uncalled"],
+  circle[data-party="O"][data-status="uncalled"] {
+    fill: $other-lean;
+  }
+
+  path[data-party="B"], circle[data-party="B"] {
+    fill: $battle;
+  }
+  path[data-party="T"], circle[data-party="T"] {
+    fill: $battle;
+  }
+  path[data-party="C"], circle[data-party="C"] {
+    fill: $battle;
+  }
+
+
+  // path[id="me"] {
+  //   fill: url(#grad-me)
+  // }
+
+  // path[id="ne"] {
+  //   fill: url(#grad-ne)
+  // }
+
+  // .svg-me--odd, .svg-me--even,
+  // .svg-ne--odd, .svg-ne--even {
+  //   stop-color: $white;
+  // }
+
+  path[data-party="I"], [id="small-states-2"] [data-party="I"], circle[data-party="I"] {
+    fill: $ind;
+  }
+
+
+  circle[data-party="R"] + path,
+  circle[data-party="D"] + path,
+  circle[data-party="I"] + path,
+  path[data-party="R"] + [id*="overall"],
+  path[data-party="D"] + [id*="overall"],
+  path[data-party="I"] + [id*="overall"] {
+    fill: #ffffff;
+  }
+  path[data-party][data-status="uncalled"] + [id*="overall"],
+  circle[data-party][data-status="uncalled"] + path {
+    fill: #222;
+  }
+
+  path.hasResults {
+    fill: #ffffff;
+  }
+  #hi-3.hasResults {
+    fill: #333;
+  }
+
+  /* ME gradients */
+  [id="grad-me"][data-large="D"].district--D {
+    .svg-me--odd {
+      stop-color: $dem;
+    }
+    .svg-me--even {
+      stop-color: $dem;
+    }
+  }
+  [id="grad-me"][data-large="D"].district--LR {
+    .svg-me--odd {
+      stop-color: $dem;
+    }
+    .svg-me--even {
+      stop-color: $rep-light;
+    }
+  }
+
+  /* NE gradients */
+  [id="grad-ne"][data-large="R"].district--LR {
+    .svg-me--odd {
+      stop-color: $rep;
+    }
+    .svg-me--even {
+      stop-color: $rep-light;
+    }
+  }
+  [id="grad-ne"][data-large="LR"].district--R {
+    .svg-ne--odd {
+      stop-color: $rep-light;
+    }
+    .svg-ne--even {
+      stop-color: $rep;
+    }
+  }
+
+  .svg-grad--dem {
+    stop-color: $dem;
+  }
+  .svg-grad--rep {
+    stop-color: $rep;
+  }
+
+  /* small states styles */
+
+  [id="small-states-2"] path {
+    stroke: none;
+  }
+  [id="small-states-2"] [data-party] circle {
+    fill: #ffffff;
+  }
+  [id="small-states-2"] [data-party="R"] circle {
+    fill: $rep;
+  }
+  [id="small-states-2"] [data-party="R"] + path {
+    fill: $white;
+  }
+  [id="small-states-2"] [data-party="R"][data-status="uncalled"] circle {
+    fill: $rep-lean;
+  }
+  [id="small-states-2"] [data-party="R"][data-status="uncalled"] + path {
+    fill: $grey-222;
+  }
+
+  [id="small-states-2"] [data-party="D"] circle {
+    fill: $dem;
+  }
+  [id="small-states-2"] [data-party="D"] + path {
+    fill: $white;
+  }
+  [id="small-states-2"] [data-party="D"][data-status="uncalled"] circle {
+    fill: $dem-lean;
+  }
+  [id="small-states-2"] [data-party="D"][data-status="uncalled"] + path {
+    fill: $grey-222;
+  }
+
+  [id="small-states-2"] [data-party="I"] circle {
+    fill: $ind;
+  }
+  [id="small-states-2"] [data-party="I"] + path {
+    fill: $white;
+  }
+  [id="small-states-2"] [data-party="I"][data-status="uncalled"] circle {
+    fill: $ind-lean;
+  }
+  [id="small-states-2"] [data-party="I"][data-status="uncalled"] + path {
+    fill: $grey-222;
+  }
+
+  [id="small-states-2"] [data-party="G"] circle {
+    fill: $green;
+  }
+  [id="small-states-2"] [data-party="G"] + path {
+    fill: $white;
+  }
+  [id="small-states-2"] [data-party="G"][data-status="uncalled"] circle {
+    fill: $green-lean;
+  }
+  [id="small-states-2"] [data-party="G"][data-status="uncalled"] + path {
+    fill: $grey-222;
+  }
+
+  [id="small-states-2"] [data-party="O"] circle {
+    fill: $other;
+  }
+  [id="small-states-2"] [data-party="O"] + path {
+    fill: $grey-222;
+  }
+  [id="small-states-2"] [data-party="O"][data-status="uncalled"] circle {
+    fill: $other-lean;
+  }
+  [id="small-states-2"] [data-party="O"][data-status="uncalled"] + path {
+    fill: $grey-222;
+  }
+
+  [id="electoral-votes"] {
+    [data-party="R"] {
+      fill: $white;
+    }
+    [data-party="R"][data-status="uncalled"] {
+      fill: $grey-222;
+    }
+    [data-party="R"][data-status="pre"] {
+      fill: $white;
+    }
+    [data-party="LR"][data-status="pre"] {
+      fill: $grey-222;
+    }
+    [data-party="D"] {
+      fill: $white;
+    }
+    [data-party="D"][data-status="uncalled"] {
+      fill: $grey-222;
+    }
+    [data-party="D"][data-status="pre"] {
+      fill: $white;
+    }
+    [data-party="LD"][data-status="pre"] {
+      fill: $grey-222;
+    }
+    [data-party="I"] {
+      fill: $white;
+    }
+    [data-party="I"][data-status="uncalled"] {
+      fill: $grey-222;
+    }
+    [data-party="I"][data-status="pre"] {
+      fill: $white;
+    }
+    [data-party="LI"][data-status="pre"] {
+      fill: $grey-222;
+    }
+    [data-party="G"] {
+      fill: $white;
+    }
+    [data-party="G"][data-status="uncalled"] {
+      fill: $grey-222;
+    }
+    [data-party="G"][data-status="pre"] {
+      fill: $white;
+    }
+    [data-party="LG"][data-status="pre"] {
+      fill: $grey-222;
+    }
+    [data-party="O"] {
+      fill: $grey-222;
+    }
+    [data-party="O"][data-status="uncalled"] {
+      fill: $grey-222;
+    }
+    [data-party="O"][data-status="pre"] {
+      fill: $grey-222;
+    }
+    [data-party="B"] {
+      fill: $grey-222;
+    }
+    [data-party="T"] {
+      fill: $grey-222;
+    }
+    [data-party="B"][data-status="pre"] {
+      fill: $grey-222;
+    }
+    [data-party="C"] {
+      fill: $grey-222;
+    }
+    [data-party="C"][data-status="pre"] {
+      fill: $grey-222;
+    }
+  }
+
+  /* svg edge cases */
+  #title-me, #title-ne {
+    stroke: none;
+  }
+  #hi-3 {
+    fill: $grey-222;
+  }
+
+  /* map wrapper */
+  [id="map"] {
+    display: none;
+    position: relative;
+    overflow: hidden;
+    padding-top: 61.58%;
+  }
+
+  // uncalled exceptions for ME/ME
+  .notLegacy {
+    [data-me-large="uncalled"] [id="me-3"],
+    [data-me-01="uncalled"] [id="me-3"],
+    [data-me-02="uncalled"] [id="me-3"],
+    [data-ne-large="uncalled"] [id="ne-3"],
+    [data-ne-01="uncalled"] [id="ne-3"],
+    [data-ne-02="uncalled"] [id="ne-3"],
+    [data-ne-03="uncalled"] [id="ne-3"] {
+      fill: #222;
+    }
+  }
+  

@@ -1,0 +1,4 @@
+/*! updated; 11-06-2020 01:18 AM **/
+
+
+Modulr.define("fox-news.elections.barchart.v1:config",["require","lodash"],function(require,_){var config={FEED:"https://candidatetracking.foxnews.com/candidates.json",VA_SUFFIX:"https://feeds-elections.foxnews.com/voter_analysis/2020_Generals/national_feeds/",AVATAR_MAP:{"Beto O’Rourke":"orourke"},LABELS:{0:"100m",1:"75m",2:"50m",3:"25m",4:"1m",5:"750k",6:"500k",7:"250k",8:""},COLORS:{D:{name:"Democrat",color_bg:"#DDEEFF",color_border:"#A7C6E5",color_hover:"#1B4E81"},R:{name:"Republican",color_bg:"#FFDCE0",color_border:"#FFB6BF",color_hover:"#D20F26"},I:{name:"Independent",color_bg:"#F4E6F9",color_border:"#DAC2E4",color_hover:"#703089"},G:{name:"Green",color_bg:"#D6F5B6",color_border:"#ADE376",color_hover:"#48980D"},O:{name:"Other",color_bg:"#F1F1F1",color_border:"#DDDDDD",color_hover:"#999999"}}};return config});

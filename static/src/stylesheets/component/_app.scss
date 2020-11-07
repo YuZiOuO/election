@@ -1,0 +1,26 @@
+/*
+    app
+*/
+body {
+  font-family: sans-serif;
+  margin: 8px 0;
+}
+
+[id="app"] {
+    max-width: 64rem;
+    margin: auto;
+    overflow: hidden;
+  }
+  [id="app"]:before {
+    content: "";
+    width: 1px;
+    margin-left: -1px;
+    float: left;
+    height: 0;
+    padding-top: calc((629.3/ 1024) * 100%);
+  }
+  [id="app"]:after {
+    content: "";
+    display: table;
+    clear: both;
+  }

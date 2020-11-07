@@ -1,0 +1,208 @@
+/*
+    controls
+*/
+
+  [id="controls"] {
+    position: relative;
+    max-width: 64rem;
+    margin: auto;
+    display: flex;
+    padding: 1rem;
+  }
+
+  .map-reset {
+    display: none;
+  }
+  .map-reset:focus {
+    outline: none;
+    box-shadow: 0 0 2px 3px #32a1ce;
+  }
+
+  /* reset button */
+.map-reset {
+  height: 42px;
+  width: 111px;
+  border: 2px solid #222;
+  border-radius: 21px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  color: #222;
+  background-color: #fff;
+  cursor: pointer;
+}
+.map-reset::before {
+  content: "";
+  width: 25px;
+  height: 16px;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 959 593' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' fill-rule='evenodd' clip-rule='evenodd' stroke-linejoin='round' stroke-miterlimit='2'%3E%3Cpath d='M827.7 286.7l-.1 4.6 6.2 11.9 4.7 16.2-4.5 6.3-8.1 9.7-1.7 7.3-5.2 2.4-9.9 10-2.4 8.9-18.4 14.1-.5 6.3-26.7 30.8-6.6 23 3.2 14.6 3.7 9.7L779 493l12 21.4 4.5 8.2 1.8 19.6.3 5.2-2.4 1.3.5 8.1-2.7 3.2-10.9 4.3-2.4-1.5-1.1-6.3-7-7.5-4.7 1-3.1-4.4-3.2-7.6-5.2.7-5-8.9-9.5-15.4-3.1-8.8 1.2-7.4v-9.5l-3-3.7-17.2-13.6-9.5-6.7-16.9 10.1-29.2-11.6-25.9 6.1-30.4-1 .1 9.4-15 20-19.5-1.7-13.8-6.1-31.8-4-21.1 7.9-7 6.1-13.7 10.6-23 11.5-9.4 19.6-1.9 8.4 3.6 15.5-8 2.2-10-1.2-17-7.6-6.6-12.3-5.1-15.9-7-11-4-4.5-8.1-19.9-11.2-11.6-14.2-1.7-11.2 1-3.3 6.9-6.8 8.5-17.2-9.6-9.7-20.6-3.2-6.5-17.9-20.6-11.5-10.2-28.9-4.1-1.2 9.6-54.5-7.3-75.1-43.2-29.7-4.2-.5-11.2-2.9-7.4-7.6-11.2L62.8 334l-5.8-3.1-8.4-3.9-4.2-.5-1.9-4.6 1.8-7.1-7.5-19.7-6.8-17.3 4-5.5.1-6.3-6.7-6.8-.2-8.2 1.7-6.6-5.4-8.9-1-7.2-5-9.3-1.8-3.9 1.6-9.5 2.1-9.6-5.4-12 2.3-7.4 5.2-4.5 5.2-11.8-.5-16.8 4-17.5 8.1-12.6 6.5-13.6 13.7-37.1-.3-5.4 2-8.3 1.9-7-1.5-7.1.6-10.8-1.8-3.2 2.3-9.4 10.4 7.9 10.5 4.2 10.8 1.3 2-9.5-3.2-8.2 5.8.7 38.3 10.3 39 9.43 65.1 13.07 32.3 5.3 58.5 7.5 83.4 6.6 78.3 1.2 9 6.1 11.4 3.9 12.7-2 14.1 6.9 11.7 3.3 1.5 16.3 1.3 10.8 9.9 5.1 19-8.7 12.9.5 16.1 6.3 16.6-4.8 23.9 1.9 11.9 7.9-7.6 1.5-17.9 3-20.8 4.8-2.9 8.4-3.6 7.8-6.3 11 8.7 10.1-2.4 4.2 1.2 7-3.3 8.6 3.3 13 .2 9.4 4.4 8.1 7.6 5.1 4.6-3.7 4.6-4.2 2.7-7.9 1.8-10.7-8-17.3 3-21.8 6.2-11.4 2.9-5 5.9-5.8 12.9-5.5 10 4.9 6.3 6.4 1.3 5.7.3 10-3 4.2s-4.5 9.1-4.7 9.7c-.2.6 5 2.1 5 2.1l4.6-8.7 5.5-2.9 5 5 2.3 9.1 1.7 18.3-3.6 1.6-2.9 5.5-3.9 10.5 3.1 4.2 7.8.9 5.5 2.9L714 209l23.9-17.3 17.8-19.4 5.726-10.638L784.9 156.2l7.6-6.9 1.4-9.1-4.6-6 10.8-13.7 7.2-7.9 24.7-6.2 26.1-6.79 9.2-9.91 3-16.6 3-20.8 2.9-8.9 13.5-4.7 11.2 1.8 9.1 29.9 10.4 7.4 3 12.5-8.2 8.6-6.9 4.1-20.3 15.3-2.1 6.8-4.3 29 11 10.4 1.8 4.1-3.9 4.5-11.1 3.7-5.2 3-6.9 7-18.6 16.3-4 1.1.8 6-3.4 22.5-2.7 4-2.9 7.2v16.4l-4.9 11.5-3.9 14.9z' fill='%23222222' fill-rule='nonzero'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+}
+
+  /* toggle element */
+.map-toggle {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+.map-toggle *,
+.map-toggle *:before,
+.map-toggle *:after {
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.map-toggle input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.map-toggle input[type="checkbox"][disabled] ~ label {
+  pointer-events: none;
+}
+.map-toggle input[type="checkbox"][disabled] ~ label .map-toggle__switch {
+  opacity: 0.4;
+}
+.map-toggle input[type="checkbox"]:checked ~ label .map-toggle__switch:before {
+  content: attr(data-unchecked);
+  left: 0;
+}
+.map-toggle input[type="checkbox"]:checked ~ label .map-toggle__switch:after {
+  content: attr(data-checked);
+}
+.map-toggle label {
+  user-select: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.map-toggle label .map-toggle__switch {
+  position: relative;
+}
+.map-toggle label .map-toggle__switch:before {
+  content: attr(data-checked);
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  text-align: center;
+}
+.map-toggle label .map-toggle__switch:after {
+  content: attr(data-unchecked);
+  font-weight: bold;
+  position: absolute;
+  z-index: 5;
+  text-align: center;
+  background: #fff;
+  transform: translate3d(0, 0, 0);
+}
+.map-toggle label .map-toggle__switch {
+  -webkit-transition: background-color 0.3s cubic-bezier(0, 1, 0.5, 1);
+  transition: background-color 0.3s cubic-bezier(0, 1, 0.5, 1);
+  background: #222;
+}
+.map-toggle label .map-toggle__switch:before {
+  color: #fff;
+}
+.map-toggle label .map-toggle__switch:after {
+  transition: transform 0.3s cubic-bezier(0, 1, 0.5, 1);
+}
+.map-toggle input[type="checkbox"]:checked ~ label .map-toggle__switch:after {
+  transform: translate3d(80px, 0, 0);
+  width: 71px;
+}
+.map-toggle label {
+  font-size: 14px;
+}
+
+/* switch dimensions */
+.map-toggle label .map-toggle__switch {
+  height: 42px;
+  flex: 0 0 155px;
+  border-radius: 21px;
+  transform: translateX(-51%);
+}
+.map-toggle label .map-toggle__switch:before {
+  left: 80px;
+  font-size: 12px;
+  line-height: 42px;
+  width: 67px;
+  padding: 0 12px;
+}
+.map-toggle label .map-toggle__switch:after {
+  top: 2px;
+  left: 2px;
+  border-radius: 19px;
+  width: 64px;
+  line-height: 38px;
+  font-size: 12px;
+}
+
+ /* archived select */
+ .select__years {
+  height: 38px;
+  width: 127px;
+  padding: 0 0 0 16px;
+  font-size: 12px;
+  font-weight: 700;
+  background: #fff;
+  border: 2px solid #333;
+  border-radius: 19px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%20000002%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat, repeat;
+  background-position: right 16px top 50%, 0 0;
+  background-size: .65em auto, 100%;
+
+  @media screen and (max-width: 375px) {
+    width: 89px;
+  }
+}
+
+// hide IE11 native arrow
+select.select__years::-ms-expand {
+display: none;
+}
+
+// prevent zoom in ios
+select.select__years:active {
+  font-size: 16px;
+}
+
+
+// [data-live="true"] .select__years--label:after {
+// content: "Live";
+// font-size: 12px;
+// font-weight: 700;
+// margin-left: -78px;
+
+// @media screen and (max-width: 375px) {
+//   display: none;
+// }
+// }
+
+/* form element focus */
+.select__years:focus, .mov__button:focus, .mov__zoom--out:focus, .mov__zoom--in:focus, .margin-toggle__switch:focus {
+outline: none;
+box-shadow: 0 0 0px 2px #73a5de;
+}
+
+.select__years--label {
+  position: absolute;
+  display: inline-block;
+}
+
+.mov-controls--alt {
+& .select__years {
+  display: inline-block !important;
+}
+& .mov__button {
+  display: none;
+}
+}

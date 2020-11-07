@@ -1,0 +1,24 @@
+.notLegacy #me {
+  fill: url(#grad-me);
+}
+.notLegacy #ne {
+  fill: url(#grad-ne);
+}
+
+[id="grad-me"] stop, [id="grad-ne"] stop {
+  transition: stop-color .5s ease;
+}
+
+stop.dem { stop-color: $dem; }
+stop.dem-lean { stop-color: $dem-lean; }
+stop.rep { stop-color: $rep; }
+stop.rep-lean { stop-color: $rep-lean; }
+stop.ind { stop-color: $ind; }
+stop.ind-lean { stop-color: $ind-lean; }
+stop.green { stop-color: $green; }
+stop.green-lean { stop-color: $green-lean; }
+stop.other { stop-color: $other; }
+stop.other-lean { stop-color: $other-lean; }
+stop.battle { stop-color: $battle; }
+stop.white { stop-color: $white; }
+stop { stop-color: $white; }

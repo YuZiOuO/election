@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/star</title>
+    <g id="icon/star" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M10,1.12977573 L12.6068935,6.41191891 L18.4360846,7.25894996 L14.2180423,11.370525 L15.213787,17.1761622 L10,14.4351121 L4.78621299,17.1761622 L5.7819577,11.370525 L1.56391541,7.25894996 L7.3931065,6.41191891 L10,1.12977573 Z" id="star" stroke="#FFFFFF"></path>
+    </g>
+</svg>

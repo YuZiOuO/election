@@ -1,0 +1,28 @@
+// utilities
+.presidential-map *,
+.presidential-map *:before,
+.presidential-map *:after {
+  box-sizing: border-box;
+}
+
+.flex-reverse {
+  flex-direction: row-reverse;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.hide {
+  display: none !important;
+}
+.show {
+  opacity: 1 !important;
+}
+.block  {
+  display: block !important;
+}
+
+.opacity-zero {
+  opacity: 0;
+}

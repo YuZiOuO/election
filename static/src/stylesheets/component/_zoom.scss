@@ -1,0 +1,24 @@
+/* 
+  Zoom styles
+*/
+
+.zoom [id="text"] {
+  display: none;
+}
+.zoom [id="counties-shapes"] path {
+  stroke-width: .5px;
+}
+
+.zoom-row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.zoom .map-reset {
+  display: flex;
+  position: absolute;
+  right: 12px;
+  top: 120%;
+  z-index: 5;
+}
